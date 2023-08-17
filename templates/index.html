@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Aug 17 04:04:22 2023
+
+@author: User
+"""
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Air Quality Prediction</title>
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1 style="color:Violet;">Air Quality Prediction</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="nowcast" placeholder="nowcast concentration" required="required" /><br>
+        <input type="text" name="raw" placeholder="raw concentration" required="required" /><p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict the air quality</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
