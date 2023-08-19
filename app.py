@@ -44,7 +44,7 @@ with open('scaler.pkl', 'rb') as scaler_file:
 #use the route() decorator to tell Flask what URL should trigger our function.
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('/templates/index.html')
 
 #You can use the methods argument of the route() decorator to handle different HTTP methods.
 #GET: A GET message is send, and the server returns data
@@ -78,7 +78,7 @@ def predict():
     predicted_data_actual_scale[['NowCast', 'RawConc']] = scaler.inverse_transform(predicted_data[['NowCast', 'RawConc']])
     predicted_aqi_actual_scale = predicted_data_actual_scale['Predicted_AQI'].values[0]
 
-    return render_template('index.html', prediction_text=f"Predicted AQI: {predicted_aqi_actual_scale:.2f}")
+    return render_template('/templates/index.html', prediction_text=f"Predicted AQI: {predicted_aqi_actual_scale:.2f}")
 
 
 
