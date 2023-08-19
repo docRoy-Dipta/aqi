@@ -28,10 +28,10 @@ import pickle
 app = Flask(__name__)
 
 #Load the trained model.
-model = tf.keras.models.load_model(r'C:\Users\User\Documents\Capstone\models\lstm_model.h5')
+model = tf.keras.models.load_model('lstm_model.h5')
 
 # Load the scaler
-with open(r'C:\Users\User\Documents\Capstone\models\scaler.pkl', 'rb') as scaler_file:
+with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 
