@@ -27,3 +27,4 @@ BGRU-LSTM outperformed other models in accuracy and temporal dependency capture.
 - Deep Learning: TensorFlow/Keras
 - Backend: AWS EC2
 - Mobile: Android (Java)
+- SQA: Testing & optimization for smooth operation
